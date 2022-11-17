@@ -1,4 +1,4 @@
-# Mastering Data Structures & Algorithms using C and C++.
+# Mastering Data Structures & Algorithms using C and C++
 
 The course content:
 
