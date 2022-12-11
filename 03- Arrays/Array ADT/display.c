@@ -115,6 +115,49 @@ int RecursiveBinarySearch(int a[], int lower, int higher, int key){
     return -1;
 }
 
+int Get(struct Array arr, int index){
+
+    if(index >= 0 && index < arr.length)
+        return arr.A[index];
+}
+
+int Set(struct Array *arr, int index, int x){
+
+    if(index >= 0 && index < arr->length)
+        arr->A[index] = x;
+}
+
+int Max(struct Array arr){
+
+    int max = arr.A[0];
+    for(int i = 0; i < arr.length; i++){
+        if(arr.A[i] > max)
+            max = arr.A[i];
+    }
+    return max;
+}
+
+int Min(struct Array arr){
+
+    int min = arr.A[0];
+    for(int i = 0; i < arr.length; i++){
+        if(arr.A[i] < min)
+            min = arr.A[i];
+    }
+    return min;
+}
+
+int Sum(struct Array arr){
+    int sum = 0;
+    for(int i = 0; i < arr.length; i++)
+        sum += arr.A[i]; 
+    return sum;
+}
+
+float Avg(struct Array arr){
+    return (float)Sum(arr)/arr.length;
+}
+
 int main(){
 
     struct Array arr;
@@ -142,7 +185,19 @@ int main(){
 
     //printf("\n %d \n", RecursiveBinarySearch(arr.A,0,arr.length,6));
 
+    //printf("\n %d \n", Get(arr, 0));
+
+    //Set(&arr, 0,14);
+
+    //printf("\n %d \n", Max(arr));
+
+    //printf("\n %d \n", Min(arr));
+
+    //printf("\n %f \n", Avg(arr));
+
     Display(arr);
+
+    
 
 
     return 0;
