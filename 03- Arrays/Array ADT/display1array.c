@@ -175,8 +175,12 @@ void Reverse2(struct Array *arr){
         swap(&arr->A[i],&arr->A[j]);
 }
 
+
+
 int main(){
 
+    //Alocanting an array in heap - the right way to do 
+    //but not for educative ways. simplyfing creating 2 arrays
     struct Array arr;
     int n, i;
     printf("Enter size of an array: \n");
@@ -191,6 +195,7 @@ int main(){
     for(i = 0; i < n; i++)
         scanf("%d", &arr.A[i]);
     arr.length = n;
+    
 
     //Insert(&arr, 0, 110);
 
@@ -212,7 +217,10 @@ int main(){
 
     //printf("\n %f \n", Avg(arr));
 
-    Reverse2(&arr);
+    //Reverse2(&arr);
+
+        
+    
     Display(arr);
 
 
